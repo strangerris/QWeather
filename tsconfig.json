@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "types": [
+      "node",
+    ],
+    "skipLibCheck": true, // 跳过库的类型检查
+    "resolveJsonModule": true,
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "baseUrl": ".",
+    "jsx": "react-jsx",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+  },
+  
+}
