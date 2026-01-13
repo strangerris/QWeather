@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>天气地图</title>
+  <script type="module" crossorigin src="/assets/index-CZ5Hebn4.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/vendor-BJ6Z-gaK.js">
+  <link rel="modulepreload" crossorigin href="/assets/DayItem-BZb4bjoT.js">
+  <link rel="modulepreload" crossorigin href="/assets/WeatherNow-CmeQQrgi.js">
+  <link rel="modulepreload" crossorigin href="/assets/WeatherDay-DTSPY8_H.js">
+  <link rel="modulepreload" crossorigin href="/assets/WeatherProgress-XOgZZjoM.js">
+  <link rel="modulepreload" crossorigin href="/assets/WeekItem-BO_4S3gV.js">
+  <link rel="modulepreload" crossorigin href="/assets/WeatherWeek-B5-j9C_n.js">
+  <link rel="modulepreload" crossorigin href="/assets/WeatherPage-C4CoBtDy.js">
+  <link rel="modulepreload" crossorigin href="/assets/WeatherMap-DkeUUVfy.js">
+  <link rel="stylesheet" crossorigin href="/assets/vendor-N9XN0DJQ.css">
+  <link rel="stylesheet" crossorigin href="/assets/index-CVGBaXhY.css">
+</head>
+
+<body>
+  <div id="root"></div>
+  <script>
+    document.oncontextmenu = function (e) {
+      return false
+    }
+    // 禁用缩放
+    document.addEventListener('touchstart', e => {
+      if (e.touches.length > 1) e.preventDefault();
+    }, { passive: false });
+
+  </script>
+</body>
+
+</html>

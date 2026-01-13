@@ -60,6 +60,7 @@ const WeatherMap: React.FC = () => {
   // 单击显示天气
   const handleClick = (params: any) => {
     if (!params.data.properties) return
+    setMobileData(params)
     const { adcode } = params.data.properties;
     const name = CCLL[adcode.toString()]?.Location_Name_ZH;
     const locationID = CCLL[adcode.toString()]?.Location_ID;
@@ -74,9 +75,9 @@ const WeatherMap: React.FC = () => {
   // 双击进行下探
   const handleDblclick = (params: any) => {
     if (!params.data.properties) return
-
+    
     if (isMobile) {
-      setMobileData(params)
+      params = mobileData
     }
     const adcode: string = (params.data.properties.adcode).toString();
     // 三级地区无法下探直接返回，二级地区找citys，一级地区找province
@@ -85,6 +86,7 @@ const WeatherMap: React.FC = () => {
     geoRequest.get(geoPath).then(res => {
       chartRef.current?.setOption(drillDown(Number(adcode), res.data));
     })
+
   };
 
   // 右击进行恢复

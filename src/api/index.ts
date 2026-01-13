@@ -22,7 +22,7 @@ export const reqWeatherDay = ({
     // return new Promise((resolve, reject) => {
     // 	resolve(oneDay['hourly'])
     // })
-    return request.get(`${config.qweather_weather_24h}?location=${urlParams}&key=${config.qweather_weather_key}`)
+    return request.get(`${config.qweather_weather_24h}?location=${urlParams}`)
 
 }
 
@@ -40,7 +40,7 @@ export const reqWeatherWeek = ({
     // return new Promise((resolve, reject) => {
     // 	resolve(oneWeek['daily'])
     // })
-    return request.get(`${config.qweather_weather_7d}?location=${urlParams}&key=${config.qweather_weather_key}`)
+    return request.get(`${config.qweather_weather_7d}?location=${urlParams}`)
 
 }
 export const reqWeatherNow = ({
@@ -57,7 +57,7 @@ export const reqWeatherNow = ({
     // return new Promise((resolve, reject) => {
     // 	resolve(now['now'])
     // })
-    return request.get(`${config.qweather_weather_now}?location=${urlParams}&key=${config.qweather_weather_key}`)
+    return request.get(`${config.qweather_weather_now}?location=${urlParams}`)
 }
 
 export const reqCityInfo = ({
@@ -72,7 +72,7 @@ export const reqCityInfo = ({
         urlParams = longitude + ',' + latitude
     }
     return request.get({
-        url: `https://geoapi.qweather.com/v2/city/lookup?location=${urlParams}&key=${config.qweather_weather_key}`,
+        url: `https://geoapi.qweather.com/v2/city/lookup?location=${urlParams}`,
     })
 }
 
